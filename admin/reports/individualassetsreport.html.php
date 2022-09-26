@@ -46,14 +46,16 @@
 </head>
 
 <body>
+<?php include "header.php"; ?>
     <div class="row">
         <?php include "sidebar.php"; ?>
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        
             <div class="container-fluid">
                 <div class="row">
                     <div
-                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-2 border-bottom">
                         <h1 class="h2">DLI 2.3: Individual Agricultural Assets</h1>
 
 
@@ -61,13 +63,12 @@
 
 
                 </div>
-
-                <?php if (isset($inputs)) : ?>
-                <table id="users_table" class="table table-striped table-bordered nowrap table-responsive">
-                    <div class="row mb-2">
+                <div class="row">
+                    <div
+                        class=" border-bottom pt-3 pb-2 mb-3">
                         <form action="" method="get">
-
-                            <div class="form-group col-md-2">
+                        <div class="row mb-2">
+                        <div class="form-group col-md-2">
 
                                 <select class="form-control" name="lga" id="lga">
                                     <option value="">All LGA</option>
@@ -95,8 +96,20 @@
                                 <input type="hidden" name="action" value="searchindassets" />
                                 <input class="form-control btn btn-success" type="submit" value="Search" />
                             </div>
+                        </div>
+
+                            
                         </form>
+
+
                     </div>
+
+
+                </div>
+
+                <?php if (isset($inputs)) : ?>
+                <table id="users_table" class="table table-striped table-bordered nowrap table-responsive">
+                    
                     <thead>
                         <tr>
                             <th>S/NO</th>
@@ -164,18 +177,25 @@
     $(document).ready(function() {
         var table = $('#users_table').DataTable({
             responsive: true,
-            scrollY: '100%',
-            scrollX: '100%',
+            scrollY: 380,
             scrollCollapse: true,
 
-            dom: 'Bfrtip',
-            buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
-            ],
+            dom: 'lBrtip',
             lengthMenu: [
-                [10, 25, 50, -1],
-                [10, 25, 50, 'All'],
+                [25, 50, 100, -1],
+                [25, 50, 100, 'All'],
             ],
+            
+
+            buttons: [
+                {
+                extend: 'spacer',
+                style: 'bar',
+                text: 'Export file as:'
+            },
+                'excel', 'pdf', "  "
+            ],
+            
         });
 
         new $.fn.dataTable.FixedHeader(table);

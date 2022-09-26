@@ -18,8 +18,9 @@ if (isset($_GET['beneficiaries'])) {
 	$lgas = getLgas($link);
 	$dlis = getDlis($link);
 	$genders = getGenders($link);
+	$beneficiaries = array();
 
-	$select = 'SELECT id, beneficiary_name, age, gender, group_name, enterprise_desc, fca_name, lga_name FROM beneficiary_view';
+	$select = 'SELECT id, beneficiary_name, age, gender, group_name, enterprise_desc, fca_name, lga_name FROM beneficiary_view where lga_id = 50';
 
 	$result = mysqli_query($link, $select);
 	if (!$result) {
@@ -333,7 +334,7 @@ if (isset($_GET['group_assets'])) {
 	}
 	while ($row = mysqli_fetch_array($result)) {
 		$inputs[] = array(
-			'enterpriseid' => $row['enterprise_id'],  'enterprise' => $row['enterprise_desc'], 'number' => $row['no_of_bfs'],
+			'enterpriseid' => $row['enterprise_id'],   'enterprise' => $row['enterprise_desc'], 'number' => $row['no_of_bfs'],
 			'item' => $row['item_desc'], 'quantity' => $row['qty_per_bf'], 'qtyappr' => $row['qty_aprvd'], 'unit' => $row['unit'],
 			'qtydstr' => $row['qty_dstr'], 'attrition' => $row['attrition'], 'percentage' => $row['percentage']
 		);
@@ -717,5 +718,3 @@ if (isset($_GET['action']) and $_GET['action'] == 'searchlgagroupassets') {
 	exit();
 }
 
-
-include 'searchform.html.php';
