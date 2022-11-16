@@ -21,21 +21,7 @@
                          </ul>
                      </div>
                  </li>
-                 <li class="mb-1">
-                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                         data-bs-target="#dashboard-collapse" aria-expanded="false">
-                         <span class="mx-1"><i class="bi bi-person"></i></span>
-                         Users
-                     </button>
-                     <div class="collapse" id="dashboard-collapse">
-                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                             <li><a href="../users/" class="link-dark rounded active">View</a></li>
-                             <li><a href="../users/?add" class="link-dark rounded">New
-                                     User</a></li>
-
-                         </ul>
-                     </div>
-                 </li>
+                 
 
                  <li class=" mb-1">
                      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
@@ -83,7 +69,7 @@
                      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                          data-bs-target="#distributions-collapse" aria-expanded="true">
                          <span class="mx-1"><i class="bi bi-people"></i></span>
-                         Distributions
+                         Procurement
                      </button>
                      <div class="collapse show" id="distributions-collapse">
                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -92,20 +78,7 @@
                          </ul>
                      </div>
                  </li>
-                 <li class=" mb-1">
-                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                         data-bs-target="#service-collapse" aria-expanded="false">
-                         <span class="mx-1"><i class="bi bi-person-check"></i></span>
-                         Service Providers
-                     </button>
-                     <div class="collapse " id="service-collapse">
-                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                             <li><a href="../serviceprovider/" class="link-dark rounded">View</a></li>
-                             <li><a href="../serviceprovider/?add" class="link-dark rounded">New S/Provider</a></li>
-
-                         </ul>
-                     </div>
-                 </li>
+                 
                  <li class=" mb-1">
                      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                          data-bs-target="#reports-collapse" aria-expanded="false">

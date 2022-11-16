@@ -185,6 +185,7 @@ while ($row = mysqli_fetch_array($result)) {
 
 
 // The basic SELECT statement
+$fcas = array();
 $select = 'SELECT * FROM fca_view';
 $where = ' WHERE TRUE';
 

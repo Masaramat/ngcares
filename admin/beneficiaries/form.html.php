@@ -118,7 +118,7 @@
                                         <div class="form-group col-md-6">
                                             <label class="form-label" for="fca">Name of Beneficiary:</label>
                                             <input class="form-control" id="beneficiary" name="beneficiary" rows="2"
-                                                cols="20"><?php htmlout($beneficiary); ?>
+                                                cols="20" value="<?php htmlout($beneficiary); ?>">
                                         </div>
 
                                         <div class="form-group col-md-6">

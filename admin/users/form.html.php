@@ -63,8 +63,8 @@
 
                         <div class="container col-md-8">
                             <div class="h-100 p-5 bg-light border border-dark rounded-3">
-                                <?php echo $_SESSION['message'];
-                                ?>
+                                
+                             
                                 <form action="?<?php htmlout($action); ?>" method="post">
                                     <div class="form-group">
                                         <label class="form-label" for="fullname">Full Name</label>
@@ -112,8 +112,6 @@
 
                                             </select>
                                         </div>
-                                        <?php print_r($lgas); ?>
-
                                     </div>
 
 

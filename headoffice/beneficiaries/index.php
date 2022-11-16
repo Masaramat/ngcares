@@ -183,6 +183,7 @@ if (isset($_POST['action']) and $_POST['action'] == 'Edit') {
 	$sql = "SELECT id, lga_name FROM lga";
 	$result = mysqli_query($link, $sql);
 	if (!$result) {
+		
 		$error = 'Error fetching list of lgas.';
 		include '../error.html.php';
 		exit();
@@ -195,7 +196,7 @@ if (isset($_POST['action']) and $_POST['action'] == 'Edit') {
 	$sql = "SELECT * FROM fca WHERE lga_id = " . $lgaid;
 	$result = mysqli_query($link, $sql);
 	if (!$result) {
-		$error = 'Error fetching list of FCAs: ' . mysqli_error($link);
+		$error = 'Error fetching list of FCAs: ';
 		include '../error.html.php';
 		exit();
 	}
@@ -205,8 +206,8 @@ if (isset($_POST['action']) and $_POST['action'] == 'Edit') {
 
 
 	// Build the list of groups
-	$sql1 = "SELECT * FROM groups WHERE fca_id = " . $fcaid;
-	echo $sql;
+	$sql1 = "SELECT * FROM ngcaresdb.groups WHERE fca_id = " . $fcaid;
+	
 	$result = mysqli_query($link, $sql1);
 
 	if (!$result) {
@@ -319,12 +320,12 @@ if (isset($_GET['editform'])) {
 	exit();
 }
 
-if (isset($_POST['action']) and $_POST['action'] == 'Delete') {
+if (isset($_POST['action']) and $_POST['action'] == 'Del') {
 	include $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/db.inc.php';
 	$id = mysqli_real_escape_string($link, $_POST['id']);
 
 	// Delete the FCA
-	$sql = "DELETE FROM fca WHERE id='$id'";
+	$sql = "DELETE FROM beneficiary WHERE id='$id'";
 	if (!mysqli_query($link, $sql)) {
 		$error = 'Error deleting fca.';
 		include '../error.html.php';

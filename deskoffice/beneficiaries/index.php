@@ -8,6 +8,7 @@ if (!userIsLoggedIn()) {
 	exit();
 }
 
+
 if (isset($_GET['add'])) {
 	$pagetitle = 'New Beneficiary';
 	$action = 'addform';
@@ -190,7 +191,7 @@ if (isset($_POST['action']) and $_POST['action'] == 'Edit') {
 	}
 
 	// Build the list of fcas
-	$sql = "SELECT * FROM fca WHERE lga_id = " . $lgaid;
+	$sql = "SELECT * FROM fca WHERE lga_name = " . $_SESSION['location'];
 	$result = mysqli_query($link, $sql);
 	if (!$result) {
 		$error = 'Error fetching list of FCAs: ' . mysqli_error($link);
@@ -343,6 +344,7 @@ while ($row = mysqli_fetch_array($result)) {
 
 include $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/db.inc.php';
 // The basic SELECT statement
+$beneficiaries = array();
 $select = 'SELECT * ';
 $from = ' FROM beneficiary_view';
 $where = ' WHERE TRUE';
@@ -367,4 +369,6 @@ while ($row = mysqli_fetch_array($result)) {
 	);
 }
 include 'beneficiaries.html.php';
+
+
 exit();

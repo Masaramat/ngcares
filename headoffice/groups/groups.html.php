@@ -84,7 +84,7 @@
                                     <div>
                                         <input type="hidden" name="id" value="<?php htmlout($group['id']); ?>" />
                                         <input type="submit" name="action" value="Edit" />
-                                        <input type="submit" name="action" value="del" />
+                                        <input type="submit" name="action" value="Del" />
                                     </div>
                                 </form>
                             </td>

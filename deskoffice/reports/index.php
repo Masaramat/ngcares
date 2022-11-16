@@ -5,6 +5,9 @@ error_reporting(E_ALL);
 include_once $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/magicquotes.inc.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/access.inc.php';
 
+$beneficiaries = array();
+$inputs = array();
+
 
 if (isset($_GET['beneficiaries'])) {
 
@@ -191,7 +194,7 @@ if (isset($_GET['lgainputs'])) {
 
 
 if (isset($_GET['action']) and $_GET['action'] == 'searchlgainput') {
-	$inputs = array();
+	
 	include $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/db.inc.php';
 	// The basic SELECT statement
 	$select = 'SELECT * ';

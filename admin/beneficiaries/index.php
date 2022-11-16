@@ -197,7 +197,7 @@ if (isset($_POST['action']) and $_POST['action'] == 'Edit') {
 	$sql = "SELECT * FROM fca WHERE lga_id = " . $lgaid;
 	$result = mysqli_query($link, $sql);
 	if (!$result) {
-		$error = 'Error fetching list of FCAs: ' . mysqli_error($link);
+		$error = 'Error fetching list of FCAs: ';
 		include '../error.html.php';
 		exit();
 	}
@@ -207,7 +207,7 @@ if (isset($_POST['action']) and $_POST['action'] == 'Edit') {
 
 
 	// Build the list of groups
-	$sql = "SELECT * FROM groups WHERE fca_id = " . $fcaid;
+	$sql = "SELECT * FROM ngcaresdb.groups WHERE fca_id = " . $fcaid;
 	$result = mysqli_query($link, $sql);
 	if (!$result) {
 		$error = 'Error fetching list of groups: ' . mysqli_error($link);
@@ -324,7 +324,7 @@ if (isset($_POST['action']) and $_POST['action'] == 'Delete') {
 	$id = mysqli_real_escape_string($link, $_POST['id']);
 
 	// Delete the FCA
-	$sql = "DELETE FROM fca WHERE id='$id'";
+	$sql = "DELETE FROM beneficiary WHERE id='$id'";
 	if (!mysqli_query($link, $sql)) {
 		$error = 'Error deleting fca.';
 		include '../error.html.php';

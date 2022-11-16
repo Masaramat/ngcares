@@ -45,6 +45,7 @@
 </head>
 
 <body>
+<?php include "header.php"; ?>
     <div class="row">
         <?php include "sidebar.php"; ?>
 
@@ -60,42 +61,48 @@
 
 
                 </div>
+                <div class="row">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <form action="" method="get">
+                     <div class="row mb-2">
+                        <div class="form-group col-md-4">
 
-                <?php if (isset($inputs)) : ?>
-                <table id="users_table" class="table table-striped table-bordered nowrap table-responsive">
-                    <div class="row mb-2">
-                        <form action="" method="get">
+                        <select class="form-control form-select" name="lga" id="lga">
+                            <option value="">All LGA</option>
+                            <?php foreach ($lgas as $lga) : ?>
+                            <option value="<?php htmlout($lga['id']); ?>"><?php htmlout($lga['name']); ?>
+                            </option>
+                            <?php endforeach; ?>
+                        </select>
+                        </div>
 
-                            <div class="form-group col-md-2">
+                        <div class="form-group col-md-4">
 
-                                <select class="form-control form-select" name="lga" id="lga">
-                                    <option value="">All LGA</option>
-                                    <?php foreach ($lgas as $lga) : ?>
-                                    <option value="<?php htmlout($lga['id']); ?>"><?php htmlout($lga['name']); ?>
-                                    </option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-
-                            <div class="form-group col-md-2">
-
-                                <select class="form-control form-select" name="enterprise" id="enterprise">
-                                    <option value=''>All Enterprises</option>
-                                    <?php foreach ($enterprises as $enterprise) : ?>
-                                    <option value="<?php htmlout($enterprise['id']); ?>">
-                                        <?php htmlout($enterprise['enterprise']); ?>
-                                    </option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
+                        <select class="form-control form-select" name="enterprise" id="enterprise">
+                            <option value=''>All Enterprises</option>
+                            <?php foreach ($enterprises as $enterprise) : ?>
+                            <option value="<?php htmlout($enterprise['id']); ?>">
+                                <?php htmlout($enterprise['enterprise']); ?>
+                            </option>
+                            <?php endforeach; ?>
+                        </select>
+                        </div>
 
 
-                            <div class="form-group col-md-2">
-                                <input type="hidden" name="action" value="searchlgagroupassets" />
-                                <input class="form-control btn btn-success" type="submit" value="Search" />
-                            </div>
-                        </form>
+                        <div class="form-group col-md-4">
+                            <input type="hidden" name="action" value="searchlgagroupassets" />
+                            <input class="form-control btn btn-success" type="submit" value="Search" />
+                        </div>
+                     </div>
+                    </form>
                     </div>
+                </div>
+
+                <?php if (isset($inputs)) : 
+                    $sno = 0;
+                    ?>
+                <table id="users_table" class="table table-striped table-bordered nowrap table-responsive">
+                   
                     <thead>
                         <tr>
                             <th>S/NO</th>
@@ -111,9 +118,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($inputs as $input) :  ?>
+                        <?php foreach ($inputs as $input) :  
+                            $sno ++;
+                            ?>
                         <tr valign="top">
-                            <td><?php htmlout($input['enterpriseid']); ?></td>
+                            <td><?php htmlout($sno); ?></td>
                             <td><?php htmlout($input['enterprise']); ?></td>
                             <td><?php htmlout($input['number']); ?></td>
                             <td><?php htmlout($input['item']); ?></td>
@@ -160,21 +169,28 @@
     <script src="../../includes/local/dashboard.js"></script>
 
     <script>
-    $(document).ready(function() {
+     $(document).ready(function() {
         var table = $('#users_table').DataTable({
             responsive: true,
-            scrollY: '100%',
-            scrollX: '100%',
+            scrollY: 380,
             scrollCollapse: true,
 
-            dom: 'Bfrtip',
-            buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
-            ],
+            dom: 'lBrtip',
             lengthMenu: [
-                [10, 25, 50, -1],
-                [10, 25, 50, 'All'],
+                [25, 50, 100, -1],
+                [25, 50, 100, 'All'],
             ],
+            
+
+            buttons: [
+                {
+                extend: 'spacer',
+                style: 'bar',
+                text: 'Export file as:'
+            },
+                'excel', 'pdf', "  "
+            ],
+            
         });
 
         new $.fn.dataTable.FixedHeader(table);

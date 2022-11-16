@@ -10,11 +10,11 @@
             <ul class="list-unstyled ps-0">
                 <li class="mb-1">
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#home-collapse" aria-expanded="false">
+                        data-bs-target="#home-collapse" aria-expanded="true">
                         <span class="mx-1"><i class="bi bi-house-door"></i></span>
                         Home
                     </button>
-                    <div class="collapse" id="home-collapse">
+                    <div class="collapse show" id="home-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="../" class="link-dark rounded">Overview</a></li>
 
@@ -25,14 +25,14 @@
 
                 <li class=" mb-1">
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#fca-collapse" aria-expanded="true">
+                        data-bs-target="#fca-collapse" aria-expanded="false">
                         <span class="mx-1"><i class="bi bi-tags"></i></span>
                         FCAs
                     </button>
-                    <div class="collapse show" id="fca-collapse">
+                    <div class="collapse " id="fca-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../fcas" class="link-dark rounded">View</a></li>
-                            <li><a href="../fcas?add" class="link-dark rounded">New FCA</a></li>
+                            <li><a href="./fcas" class="link-dark rounded">View</a></li>
+                            <li><a href="./fcas?add" class="link-dark rounded">New FCA</a></li>
 
                         </ul>
                     </div>
@@ -45,7 +45,8 @@
                     </button>
                     <div class="collapse " id="groups-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../groups" class="link-dark rounded">View</a></li>
+                            <li><a href="./groups" class="link-dark rounded">View</a></li>
+                            <li><a href="./groups/?add" class="link-dark rounded">New Group</a></li>
 
 
                         </ul>
@@ -59,8 +60,8 @@
                     </button>
                     <div class="collapse " id="beneficiaries-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../beneficiaries/" class="link-dark rounded">View</a></li>
-                            <li><a href="../beneficiaries/?add" class="link-dark rounded">New Beneficiary</a></li>
+                            <li><a href="./beneficiaries/" class="link-dark rounded">View</a></li>
+                            <li><a href="./beneficiaries/?add" class="link-dark rounded">New Beneficiary</a></li>
 
                         </ul>
                     </div>
@@ -69,11 +70,11 @@
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                         data-bs-target="#distributions-collapse" aria-expanded="false">
                         <span class="mx-1"><i class="bi bi-people"></i></span>
-                        Distributions
+                        Procurement
                     </button>
                     <div class="collapse " id="distributions-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../distribution" class="link-dark rounded">View</a></li>
+                            <li><a href="./distribution" class="link-dark rounded">View</a></li>
 
                         </ul>
                     </div>
@@ -87,8 +88,22 @@
                     </button>
                     <div class="collapse " id="reports-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../reports/?beneficiaries" class="link-dark rounded">Beneficiaries Report</a>
+                            <li><a href="reports/?beneficiaries" class="link-dark rounded">Beneficiaries Report</a>
                             </li>
+                            <li><a href="reports/?inputs" class="link-dark rounded">Inputs and Services Report</a>
+                            </li>
+                            <li><a href="reports/?group_assets" class="link-dark rounded">Group Assets Report</a>
+                            </li>
+                            <li><a href="reports/?individual_assets" class="link-dark rounded">Individual Assets
+                                    Report</a></li>
+                    </li>
+                    <li><a href="reports/?lgainputs" class="link-dark rounded">LGA Inputs and Services Report</a>
+                    </li>
+                    <li><a href="reports/?lgagroup_assets" class="link-dark rounded">LGA Group Assets Report</a>
+                    </li>
+                    <li><a href="reports/?lgaindividual_assets" class="link-dark rounded">LGA Individual Assets
+                            Report</a>
+                    </li>
 
                 </li>
 

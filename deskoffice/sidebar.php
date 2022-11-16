@@ -69,7 +69,7 @@
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                         data-bs-target="#distributions-collapse" aria-expanded="false">
                         <span class="mx-1"><i class="bi bi-people"></i></span>
-                        Distributions
+                        Procurement
                     </button>
                     <div class="collapse " id="distributions-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -87,14 +87,14 @@
                     </button>
                     <div class="collapse " id="reports-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../reports/?beneficiaries" class="link-dark rounded">Beneficiaries Report</a>
+                            <li><a href="./reports/?beneficiaries" class="link-dark rounded">Beneficiaries Report</a>
                             </li>
-                            <li><a href="../reports/?lgainputs" class="link-dark rounded">LGA Inputs Report</a>
+                            <li><a href="./reports/?lgainputs" class="link-dark rounded">LGA Inputs Report</a>
                             </li>
-                            <li><a href="../reports/?lgagroup_assets" class="link-dark rounded">LGA Group Assets
+                            <li><a href="./reports/?lgagroup_assets" class="link-dark rounded">LGA Group Assets
                                     Report</a>
                             </li>
-                            <li><a href="../reports/?lgaindividual_assets" class="link-dark rounded">LGA Individual
+                            <li><a href="./reports/?lgaindividual_assets" class="link-dark rounded">LGA Individual
                                     Assets
                                     Report</a></li>
 

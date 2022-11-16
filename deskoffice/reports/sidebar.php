@@ -31,7 +31,7 @@
                     </button>
                     <div class="collapse" id="fca-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="./" class="link-dark rounded">View</a></li>
+                            <li><a href="../fcas/" class="link-dark rounded">View</a></li>
 
                         </ul>
                     </div>
@@ -68,7 +68,7 @@
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                         data-bs-target="#distributions-collapse" aria-expanded="false">
                         <span class="mx-1"><i class="bi bi-people"></i></span>
-                        Distributions
+                        Procurement
                     </button>
                     <div class="collapse " id="distributions-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">

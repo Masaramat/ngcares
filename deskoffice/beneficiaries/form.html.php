@@ -73,16 +73,9 @@
                                     <div class="row">
                                         <div class="form-group col-md-4">
                                             <label class="form-label" for="lga">LGA:</label>
-                                            <select class="form-control form-select" name="lga" id="lga"
-                                                onchange="FetchFCA(this.value)">
-                                                <option value="">Select one</option>
-                                                <?php foreach ($lgas as $lga) : ?>
-                                                <option value="<?php htmlout($lga['id']); ?>"
-                                                    <?php
-                                                                                                    if ($lga['id'] == $lgaid)
-                                                                                                        echo ' selected="selected"'; ?>>
-                                                    <?php htmlout($lga['name']); ?></option>
-                                                <?php endforeach; ?>
+                                            <select class="form-control form-select" name="lga" id="lga"">
+                                                <option value="<?php htmlout($_SESSION['location']); ?>"><?php htmlout($_SESSION['location']);?></option>
+                                               
                                             </select>
                                         </div>
 
@@ -93,8 +86,8 @@
                                                 <?php foreach ($fcas as $fca) : ?>
                                                 <option value="<?php htmlout($fca['id']); ?>"
                                                     <?php
-                                                                                                    if ($fca['id'] == $fcaid)
-                                                                                                        echo ' selected="selected"'; ?>>
+                                                if ($fca['id'] == $fcaid)
+                                                    echo ' selected="selected"'; ?>>
                                                     <?php htmlout($fca['fcaname']); ?></option>
                                                 <?php endforeach; ?>
 
@@ -250,19 +243,8 @@
         })
     }
 
-    function FetchFCA(id) {
-        $("#fca").html("");
-        $.ajax({
-            type: "post",
-            url: "./get_fca.php",
-            data: {
-                lga_id: id
-            },
-            success: function(data) {
-                $("#fca").html(data);
-            }
-        })
-    }
+    
+    
     </script>
 
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>

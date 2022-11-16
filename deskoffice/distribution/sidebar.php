@@ -46,6 +46,7 @@
                     <div class="collapse " id="groups-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="../groups" class="link-dark rounded">View</a></li>
+                            <li><a href="../groups?add" class="link-dark rounded">New Group</a></li>
 
 
                         </ul>
@@ -69,7 +70,7 @@
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                         data-bs-target="#distributions-collapse" aria-expanded="true">
                         <span class="mx-1"><i class="bi bi-people"></i></span>
-                        Items Procurement
+                        Procurement
                     </button>
                     <div class="collapse show" id="distributions-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">

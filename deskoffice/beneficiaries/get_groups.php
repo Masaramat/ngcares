@@ -1,12 +1,12 @@
 <?php
-echo "<script>alert('hit')</script>";
+
 if (isset($_POST['fca_id'])) {
 
 	include $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/db.inc.php';
 	echo "<option value=''>Select Group</option>";
 	//build the list of groups
 
-	$sql = "SELECT * FROM groups WHERE fca_id = " . $_POST['fca_id'];
+	$sql = "SELECT * FROM ngcaresdb.groups WHERE fca_id = " . $_POST['fca_id'];
 
 	$result = mysqli_query($link, $sql);
 	if (!$result) {

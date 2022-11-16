@@ -148,15 +148,15 @@ if (isset($_GET['editform'])) {
 
 
 //the following if stamement handles the deleting of an user from the database
-if (isset($_POST['action']) and $_POST['action'] == 'Delete') {
+if (isset($_POST['action']) and $_POST['action'] == 'Del') {
 	include $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/db.inc.php';
 	$id = mysqli_real_escape_string($link, $_POST['id']);
 
-	// Delete the User
-	$sql = "DELETE FROM User WHERE id='$id'";
+	// Delete the Service provider
+	$sql = "DELETE FROM service_provider WHERE id='$id'";
 	if (!mysqli_query($link, $sql)) {
 		$error = 'Error deleting User.';
-		include 'error.html.php';
+		include '../error.html.php';
 		exit();
 	}
 

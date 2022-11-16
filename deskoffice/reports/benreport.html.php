@@ -45,6 +45,7 @@
 </head>
 
 <body>
+
     <?php include "header.php"; ?>
 
     <div class="row">
@@ -62,28 +63,25 @@
 
 
                 </div>
-
-                <?php if (isset($beneficiaries)) : ?>
-                <table id="users_table" class="table table-striped table-bordered nowrap table-responsive">
-                    <div class="row mb-2">
-                        <form action="" method="get">
+                <div class="row">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <form action="" method="get">
+                        <div class="row mb-2">
 
 
                             <div class="form-group col-md-2">
                                 <select class="form-control form-select" name="lga" id="lga">
-
-
-                                    <option value="<?php htmlout($_SESSION['location']); ?>">
-                                        <?php htmlout($_SESSION['location']); ?>
+                                    <option value="">All LGA</option>
+                                    <?php foreach ($lgas as $lga) : ?>
+                                    <option value="<?php htmlout($lga['id']); ?>"><?php htmlout($lga['name']); ?>
                                     </option>
-
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
 
                             <div class="form-group col-md-2">
 
-                                <select class="form-control form-select" name="dli" id="dli"
-                                    onchange="FetchEnterprise(this.value)">
+                                <select class="form-control form-select" name="dli" id="dli" onchange="FetchEnterprise(this.value)">
                                     <option value="">All DLI</option>
                                     <?php foreach ($dlis as $dli) : ?>
                                     <option value="<?php htmlout($dli['id']); ?>"> <?php htmlout($dli['dliname']); ?>
@@ -116,8 +114,14 @@
                                 <input type="hidden" name="action" value="searchbeneficiary" />
                                 <input class="form-control btn btn-success" type="submit" value="Search" />
                             </div>
+                            </div>
                         </form>
                     </div>
+                <?php if (isset($beneficiaries)) : ?>
+                <table id="users_table" class="table table-striped table-bordered nowrap table-responsive">
+                    
+                        
+                    
                     <thead>
                         <tr>
                             <th>S/NO</th>
@@ -147,6 +151,9 @@
                         <?php endforeach; ?>
                 </table>
                 <?php endif; ?>
+                </div>
+
+                
 
 
 
@@ -182,17 +189,25 @@
     $(document).ready(function() {
         var table = $('#users_table').DataTable({
             responsive: true,
-            scrollY: '100%',
+            scrollY: 380,
             scrollCollapse: true,
 
-            dom: 'Bfrtip',
-            buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
-            ],
+            dom: 'lBrtip',
             lengthMenu: [
-                [10, 25, 50, -1],
-                [10, 25, 50, 'All'],
+                [25, 50, 100, -1],
+                [25, 50, 100, 'All'],
             ],
+            
+
+            buttons: [
+                {
+                extend: 'spacer',
+                style: 'bar',
+                text: 'Export file as:'
+            },
+                'excel', 'pdf', "  "
+            ],
+            
         });
 
         new $.fn.dataTable.FixedHeader(table);
@@ -212,7 +227,6 @@
         })
     }
     </script>
-
 
 </body>
 

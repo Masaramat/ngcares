@@ -153,7 +153,7 @@ if (isset($_GET['editform'])){
 	exit();
 }
 
-if (isset($_POST['action']) and $_POST['action'] == 'Delete'){
+if (isset($_POST['action']) and $_POST['action'] == 'Del'){
 	include $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/db.inc.php';
 	$id = mysqli_real_escape_string($link, $_POST['id']);
 		

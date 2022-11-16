@@ -76,13 +76,10 @@ if (isset($_GET['addform'])) {
 	}
 
 
-	$sql = "INSERT INTO groups SET
+	$sql = "INSERT INTO ngcaresdb.groups SET
 	group_name = '$group',
 	fca_id = '$fcaid',
 	enterprise_id = '$enterpriseid'";
-
-	echo $sql;
-
 
 	if (!mysqli_query($link, $sql)) {
 		$error = mysqli_error($link);
@@ -187,7 +184,7 @@ if (isset($_GET['editform'])) {
 		exit();
 	}
 
-	$sql = "UPDATE groups SET
+	$sql = "UPDATE ngcaresdb.groups SET
 	fca_id='$fca',
 	group_name='$groupname',
 	enterprise_id='$enterprise' 
@@ -203,12 +200,12 @@ if (isset($_GET['editform'])) {
 	exit();
 }
 
-if (isset($_POST['action']) and $_POST['action'] == 'Delete') {
+if (isset($_POST['action']) and $_POST['action'] == 'Del') {
 	include $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/db.inc.php';
 	$id = mysqli_real_escape_string($link, $_POST['id']);
 
 	// Delete the FCA
-	$sql = "DELETE FROM fca WHERE id='$id'";
+	$sql = "DELETE FROM ngcaresdb.groups WHERE id='$id'";
 	if (!mysqli_query($link, $sql)) {
 		$error = 'Error deleting fca.';
 		include 'error.html.php';

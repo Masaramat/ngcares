@@ -60,7 +60,8 @@ if (isset($_GET['addform'])) {
 	fca_name='$fca',
 	fca_leader='$fcaleader',
 	fca_leader_phone='$phoneline',	
-	lga_id='$lga'";
+	lga_id='$lga',
+	status = 'pending'";
 
 	if (!mysqli_query($link, $sql)) {
 		$error = mysqli_error($link);

@@ -26,6 +26,3 @@ if (isset($_POST['user_role'])) {
 
 
 ?>
-<script>
-alert("success")
-</script>

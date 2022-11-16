@@ -72,7 +72,7 @@ if (isset($_GET['addform'])) {
 	}
 
 
-	$sql = "INSERT INTO groups SET
+	$sql = "INSERT INTO ngcaresdb.groups SET
 	group_name = '$group',
 	fca_id = '$fcaid',
 	enterprise_id = '$enterpriseid'";
@@ -183,7 +183,7 @@ if (isset($_GET['editform'])) {
 		exit();
 	}
 
-	$sql = "UPDATE groups SET
+	$sql = "UPDATE ngcaresdb.groups SET
 	fca_id='$fca',
 	group_name='$groupname',
 	enterprise_id='$enterprise' 
@@ -228,6 +228,7 @@ while ($row = mysqli_fetch_array($result)) {
 
 
 // The basic SELECT statement
+$groups = array();
 $select = 'SELECT id, group_name, enterprise_desc, fca_name, lga_id, lga_name FROM groups_view';
 $where = ' WHERE TRUE';
 

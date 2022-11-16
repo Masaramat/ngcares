@@ -294,6 +294,7 @@ if (isset($_POST['action']) and $_POST['action'] == 'Delete') {
 
 include $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/db.inc.php';
 // The basic SELECT statement
+$distributions = array();
 $select = 'SELECT * ';
 $from = ' FROM item_distribution_view';
 $where = ' WHERE TRUE';
