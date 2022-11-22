@@ -106,12 +106,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'searchbeneficiary') {
 
 	//build the list of genders
 	$genders = getGenders($link);
-
-
-	$lgaid = mysqli_real_escape_string($link, $_SESSION['location']);
-	if ($lgaid != '') { // An LGA is selected	
-		$where .= " AND lga_name='$lgaid'";
-	}
+	
 
 	$dliid = mysqli_real_escape_string($link, $_GET['dli']);
 	if ($dliid != '') { // A DLI is selected	
@@ -168,10 +163,7 @@ if (isset($_GET['lgainputs'])) {
 	$from = ' FROM lgawise_inputs_progress_report';
 	$where = ' WHERE TRUE';
 
-	$lgaid = mysqli_real_escape_string($link, $_SESSION['location']);
-	if ($lgaid != '') { // An enterprise is selected	
-		$where .= " AND lga_name='$lgaid'";
-	}
+	
 
 	$result = mysqli_query($link, $select . $from . $where);
 	if (!$result) {
@@ -200,11 +192,7 @@ if (isset($_GET['action']) and $_GET['action'] == 'searchlgainput') {
 	$select = 'SELECT * ';
 	$from = ' FROM lgawise_inputs_progress_report';
 	$where = ' WHERE TRUE';
-
-	$lgaid = mysqli_real_escape_string($link, $_GET['lga']);
-	if ($lgaid != '') { // An enterprise is selected	
-		$where .= " AND lga_name='$lgaid'";
-	}
+	
 
 	$enterpriseid = mysqli_real_escape_string($link, $_GET['enterprise']);
 	if ($enterpriseid != '') { // An enterprise is selected	
@@ -468,6 +456,21 @@ if (isset($_GET['action']) and $_GET['action'] == 'searchlgagroupassets') {
 
 	include 'lgagroupassetreport.html.php';
 	exit();
+}
+
+function getEnt($link){
+	//build the list of enterprises
+	$sql = "SELECT id, dli_id, enterprise_desc FROM enterprise where id in(5,6)";
+	$result = mysqli_query($link, $sql);
+	if (!$result) {
+		$error = 'Error fetching list of Enterprises:' . mysqli_error($link);
+		include '../error.html.php';
+		exit();
+	}
+	while ($row = mysqli_fetch_array($result)) {
+		$enterprises[] = array('id' => $row['id'], 'dliid' => $row['dli_id'], 'enterprise' => $row['enterprise_desc']);
+	}
+	return $enterprises;
 }
 
 

@@ -118,18 +118,17 @@
                             </li>
                             <li><a href="./?inputs" class="link-dark rounded">Inputs and Services Report</a>
                             </li>
+                            <li><a href="./?lgainputs" class="link-dark rounded">LGA Inputs and Services Report</a>
+                </li>
                             <li><a href="./?group_assets" class="link-dark rounded">Group Assets Report</a>
                             </li>
-                            <li><a href="./?individual_assets" class="link-dark rounded">Individual Assets
-                                    Report</a></li>
+                            <li><a href="./?lgagroup_assets" class="link-dark rounded">LGA Group Assets Report</a> </li>
+                            <li><a href="./?individual_assets" class="link-dark rounded">Individual Assets Report</a></li>
+                            <li><a href="./?lgaindividual_assets" class="link-dark rounded">LGA Individual Assets Report</a> </li>
                 </li>
-                <li><a href="./?lgainputs" class="link-dark rounded">LGA Inputs and Services Report</a>
-                </li>
-                <li><a href="./?lgagroup_assets" class="link-dark rounded">LGA Group Assets Report</a>
-                </li>
-                <li><a href="./?lgaindividual_assets" class="link-dark rounded">LGA Individual Assets
-                        Report</a>
-                </li>
+                
+                
+                
 
 
             </ul>

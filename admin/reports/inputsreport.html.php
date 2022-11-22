@@ -61,22 +61,10 @@
 
 
                 </div>
-                <div class="row">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div class="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    
                     <form action="" method="get">
                      <div class="row mb-2">
-
-                            <div class="form-group col-md-4">
-
-                                <select class="form-control" name="lga" id="lga">
-                                    <option value="">All LGA</option>
-                                    <?php foreach ($lgas as $lga) : ?>
-                                    <option value="<?php htmlout($lga['id']); ?>"><?php htmlout($lga['name']); ?>
-                                    </option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-
                             <div class="form-group col-md-4">
 
                                 <select class="form-control form-select" name="enterprise" id="enterprise">
@@ -90,13 +78,13 @@
                             </div>
 
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-2">
                                 <input type="hidden" name="action" value="searchinput" />
                                 <input class="form-control btn btn-success" type="submit" value="Search" />
                             </div>
                      </div>
                         </form>
-                    </div>
+                    
                 </div>
 
                 <?php if (isset($inputs)) : ?>
@@ -131,6 +119,14 @@
 
                         </tr>
                         <?php endforeach; ?>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
                 <?php endif; ?>
 
@@ -171,21 +167,24 @@
             scrollY: 380,
             scrollCollapse: true,
 
-            dom: 'lBrtip',
+            dom: 'riptlB',
             lengthMenu: [
                 [25, 50, 100, -1],
                 [25, 50, 100, 'All'],
-            ],
-            
+            ], 
+                        
 
             buttons: [
                 {
                 extend: 'spacer',
                 style: 'bar',
-                text: 'Export file as:'
-            },
-                'excel', 'pdf', "  "
-            ],
+                text: 'Export file as:',
+                
+                },
+                {extend: 'excel', className: "alert alert-success" },
+                {extend: 'pdf', className: "btn btn-primary"}
+            ]
+            
             
         });
 

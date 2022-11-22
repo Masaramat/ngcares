@@ -119,15 +119,17 @@
                             </li>
                             <li><a href="reports/?inputs" class="link-dark rounded">Inputs and Services Report</a>
                             </li>
+                            <li><a href="reports/?lgainputs" class="link-dark rounded">LGA Inputs and Services Report</a>
+                </li>
                             <li><a href="reports/?group_assets" class="link-dark rounded">Group Assets Report</a>
                             </li>
+                            <li><a href="reports/?lgagroup_assets" class="link-dark rounded">LGA Group Assets Report</a>
+                </li>
                             <li><a href="reports/?individual_assets" class="link-dark rounded">Individual Assets
                                     Report</a></li>
                 </li>
-                <li><a href="reports/?lgainputs" class="link-dark rounded">LGA Inputs and Services Report</a>
-                </li>
-                <li><a href="reports/?lgagroup_assets" class="link-dark rounded">LGA Group Assets Report</a>
-                </li>
+               
+                
                 <li><a href="reports/?lgaindividual_assets" class="link-dark rounded">LGA Individual Assets
                         Report</a>
                 </li>

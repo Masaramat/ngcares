@@ -27,10 +27,10 @@
                         <span class="mx-1"><i class="bi bi-person"></i></span>
                         Users
                     </button>
-                    <div class="collapse" id="dashboard-collapse">
+                    <div class="collapse " id="dashboard-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../users/" class="link-dark rounded active">View</a></li>
-                            <li><a href="../users/?add" class="link-dark rounded">New
+                            <li><a href="./" class="link-dark rounded active">View</a></li>
+                            <li><a href="./?add" class="link-dark rounded">New
                                     User</a></li>
 
                         </ul>
@@ -43,7 +43,7 @@
                         <span class="mx-1"><i class="bi bi-tags"></i></span>
                         FCAs
                     </button>
-                    <div class="collapse" id="fca-collapse">
+                    <div class="collapse " id="fca-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="../fcas/" class="link-dark rounded">View</a></li>
                             <li><a href="../fcas/?add" class="link-dark rounded">New FCA</a></li>
@@ -59,8 +59,8 @@
                     </button>
                     <div class="collapse show" id="groups-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="./" class="link-dark rounded">View</a></li>
-                            <li><a href="./?add" class="link-dark rounded">New Group</a></li>
+                            <li><a href="../groups/" class="link-dark rounded">View</a></li>
+                            <li><a href="../groups/?add" class="link-dark rounded">New Group</a></li>
 
                         </ul>
                     </div>
@@ -83,7 +83,7 @@
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                         data-bs-target="#distributions-collapse" aria-expanded="false">
                         <span class="mx-1"><i class="bi bi-people"></i></span>
-                        Procurement
+                        Distributions
                     </button>
                     <div class="collapse " id="distributions-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -114,47 +114,33 @@
                     </button>
                     <div class="collapse " id="reports-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../reports/?beneficiaries" class="link-dark rounded">Beneficiaries Report</a>
-                            </li>
-                            <li><a href="../reports/?inputs" class="link-dark rounded">Inputs and Services Report</a>
-                            </li>
-                            <li><a href="../reports/?group_assets" class="link-dark rounded">Group Assets Report</a>
-                            </li>
-                            <li><a href="../reports/?individual_assets" class="link-dark rounded">Individual Assets
-                                    Report</a></li>
-                </li>
-                <li><a href="../reports/?lgainputs" class="link-dark rounded">LGA Inputs and Services Report</a>
-                </li>
-                <li><a href="../reports/?lgagroup_assets" class="link-dark rounded">LGA Group Assets Report</a>
-                </li>
-                <li><a href="../reports/?lgaindividual_assets" class="link-dark rounded">LGA Individual Assets
-                        Report</a>
-                </li>
+                            <li><a href="../reports/?beneficiaries" class="link-dark rounded">Beneficiaries Report</a></li>
+                            <li><a href="../reports/?inputs" class="link-dark rounded">Inputs and Services Report</a></li>
+                            <li><a href="../reports/?lgainputs" class="link-dark rounded">LGA Inputs and Services Report</a></li>
+                            <li><a href="../reports/?group_assets" class="link-dark rounded">Group Assets Report</a></li>
+                            <li><a href="../reports/?lgagroup_assets" class="link-dark rounded">LGA Group Assets Report</a></li>
+                            <li><a href="../reports/?individual_assets" class="link-dark rounded">Individual Assets Report</a></li>
+                            <li><a href="../reports/?lgaindividual_assets" class="link-dark rounded">LGA Individual Assets Report</a></li>
+                        </ul>
 
+                </li>
+       
+                <li class="border-top my-3"></li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#account-collapse" aria-expanded="false">
+                        <i class="bi bi-person-square me-2"></i>
+                        <?php echo $_SESSION['userdata']; ?>
+                    </button>
+                    <div class="collapse" id="account-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a class="link-dark rounded" href=""><?php include_once '../../logout.inc.html.php'; ?></a>
+                            </li>
 
+                        </ul>
+                    </div>
+                </li>
             </ul>
-        </div>
-        </li>
-        <li class="border-top my-3"></li>
-        <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                data-bs-target="#account-collapse" aria-expanded="false">
-                <i class="bi bi-person-square me-2"></i>
-                <?php echo $_SESSION['userdata']; ?>
-            </button>
-            <div class="collapse" id="account-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="link-dark rounded">New...</a></li>
-                    <li><a href="#" class="link-dark rounded">Profile</a></li>
-                    <li><a href="#" class="link-dark rounded">Settings</a></li>
-                    <li><a href="#" class="link-dark rounded"><?php include '../logout.inc.html.php'; ?></a>
-                    </li>
-        </li>
-
-        </ul>
-    </div>
-    </li>
-    </ul>
 
     </div>
     </div>

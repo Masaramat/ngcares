@@ -98,8 +98,7 @@
                                         <div>
                                             <input type="hidden" name="id"
                                                 value="<?php htmlout($beneficiary['id']); ?>" />
-                                            <input type="submit" name="action" value="Edit" />
-                                            <input type="submit" name="action" value="Del" />
+                                            <input class="bg-primary border-primary text-light" type="submit" name="action" value="Edit" />
                                         </div>
                                     </form>
                                 </td>

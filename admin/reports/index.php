@@ -406,7 +406,7 @@ if (isset($_GET['lgainputs'])) {
 
 	include $_SERVER['DOCUMENT_ROOT'] . '/ngcares/includes/db.inc.php';
 
-	$inputs = array();
+	$inputs = array();	
 	//build the list of enterprises
 	$sql = "SELECT id, dli_id, enterprise_desc FROM enterprise where dli_id = 1";
 	$result = mysqli_query($link, $sql);
@@ -419,20 +419,10 @@ if (isset($_GET['lgainputs'])) {
 		$enterprises[] = array('id' => $row['id'], 'dliid' => $row['dli_id'], 'enterprise' => $row['enterprise_desc']);
 	}
 
-	// Build the list of lgas
-	$sql = "SELECT id, lga_name FROM lga";
-	$result = mysqli_query($link, $sql);
-	if (!$result) {
-		$error = 'Error fetching list of LGAs.';
-		include '../../error.html.php';
-		exit();
-	}
-	while ($row = mysqli_fetch_array($result)) {
-		$lgas[] = array('id' => $row['id'], 'name' => $row['lga_name']);
-	}
+	
 
 	$select = 'SELECT * ';
-	$from = ' FROM lgawise_inputs_progress_report';
+	$from = ' FROM lgawise_inputs_progress_report where lga_id = 20';
 
 
 	$result = mysqli_query($link, $select . $from);
@@ -529,7 +519,7 @@ if (isset($_GET['lgaindividual_assets'])) {
 
 	// The basic SELECT statement
 	$select = 'SELECT * ';
-	$from = ' FROM lgawise_individualasset_progress_report';
+	$from = ' FROM lgawise_individualasset_progress_report where lga_id = 20';
 
 
 
@@ -639,7 +629,7 @@ if (isset($_GET['lgagroup_assets'])) {
 
 
 	$select = 'SELECT * ';
-	$from = ' FROM lgawise_groupasset_progress_report';
+	$from = ' FROM lgawise_groupasset_progress_report where lga_id = 20';
 
 
 

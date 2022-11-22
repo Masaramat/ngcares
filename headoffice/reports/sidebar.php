@@ -21,22 +21,6 @@
                         </ul>
                     </div>
                 </li>
-                <li class="mb-1">
-                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#dashboard-collapse" aria-expanded="false">
-                        <span class="mx-1"><i class="bi bi-person"></i></span>
-                        Users
-                    </button>
-                    <div class="collapse" id="dashboard-collapse">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../users/" class="link-dark rounded active">View</a></li>
-                            <li><a href="../users/?add" class="link-dark rounded">New
-                                    User</a></li>
-
-                        </ul>
-                    </div>
-                </li>
-
                 <li class=" mb-1">
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                         data-bs-target="#fca-collapse" aria-expanded="false">
@@ -45,8 +29,8 @@
                     </button>
                     <div class="collapse" id="fca-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="./" class="link-dark rounded">View</a></li>
-                            <li><a href="./?add" class="link-dark rounded">New FCA</a></li>
+                            <li><a href="../fcas/" class="link-dark rounded">View</a></li>
+                            <li><a href="../fcas/?add" class="link-dark rounded">New FCA</a></li>
 
                         </ul>
                     </div>
@@ -92,20 +76,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class=" mb-1">
-                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#service-collapse" aria-expanded="false">
-                        <span class="mx-1"><i class="bi bi-person-check"></i></span>
-                        Service Providers
-                    </button>
-                    <div class="collapse " id="service-collapse">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../serviceprovider/" class="link-dark rounded">View</a></li>
-                            <li><a href="../serviceprovider/?add" class="link-dark rounded">New S/Provider</a></li>
-
-                        </ul>
-                    </div>
-                </li>
+                
                 <li class=" mb-1">
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                         data-bs-target="#reports-collapse" aria-expanded="true">
@@ -118,18 +89,17 @@
                             </li>
                             <li><a href="./?inputs" class="link-dark rounded">Inputs and Services Report</a>
                             </li>
+                            <li><a href="./?lgainputs" class="link-dark rounded">LGA Inputs and Services Report</a>
+                </li>
                             <li><a href="./?group_assets" class="link-dark rounded">Group Assets Report</a>
                             </li>
-                            <li><a href="./?individual_assets" class="link-dark rounded">Individual Assets
-                                    Report</a></li>
+                            <li><a href="./?lgagroup_assets" class="link-dark rounded">LGA Group Assets Report</a> </li>
+                            <li><a href="./?individual_assets" class="link-dark rounded">Individual Assets Report</a></li>
+                            <li><a href="./?lgaindividual_assets" class="link-dark rounded">LGA Individual Assets Report</a> </li>
                 </li>
-                <li><a href="./?lgainputs" class="link-dark rounded">LGA Inputs and Services Report</a>
-                </li>
-                <li><a href="./?lgagroup_assets" class="link-dark rounded">LGA Group Assets Report</a>
-                </li>
-                <li><a href="./?lgaindividual_assets" class="link-dark rounded">LGA Individual Assets
-                        Report</a>
-                </li>
+                
+                
+                
 
 
             </ul>

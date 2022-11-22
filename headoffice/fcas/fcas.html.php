@@ -82,8 +82,8 @@
                                 <form action="?" method="post">
                                     <div>
                                         <input type="hidden" name="id" value="<?php htmlout($fca['id']); ?>" />
-                                        <input type="submit" name="action" value="Edit" />
-                                        <input type="submit" name="action" value="Del" />
+                                        <input class="btn-xs btn-primary" type="submit" name="action" value="Edit" />
+                                         
                                     </div>
                                 </form>
                             </td>

@@ -14,10 +14,9 @@
                         <span class="mx-1"><i class="bi bi-house-door"></i></span>
                         Home
                     </button>
-                    <div class="collapse" id="home-collapse">
+                    <div class="collapse " id="home-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="../" class="link-dark rounded">Overview</a></li>
-
 
                         </ul>
                     </div>
@@ -31,8 +30,7 @@
                     </button>
                     <div class="collapse " id="fca-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../fcas" class="link-dark rounded">View</a></li>
-
+                            <li><a href="../fcas/" class="link-dark rounded">View</a></li>
 
                         </ul>
                     </div>
@@ -45,9 +43,7 @@
                     </button>
                     <div class="collapse " id="groups-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../groups" class="link-dark rounded">View</a></li>
-                            <li><a href="../groups?add" class="link-dark rounded">New Group</a></li>
-
+                            <li><a href="../groups/" class="link-dark rounded">View</a></li>
 
                         </ul>
                     </div>
@@ -61,7 +57,6 @@
                     <div class="collapse show" id="beneficiaries-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="../beneficiaries/" class="link-dark rounded">View</a></li>
-                            <li><a href="../beneficiaries/?add" class="link-dark rounded">New Beneficiary</a></li>
 
                         </ul>
                     </div>
@@ -70,16 +65,16 @@
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                         data-bs-target="#distributions-collapse" aria-expanded="false">
                         <span class="mx-1"><i class="bi bi-people"></i></span>
-                        Procurement
+                        Procurment
                     </button>
                     <div class="collapse " id="distributions-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="../distribution" class="link-dark rounded">View</a></li>
+                            <li><a href="../distribution/?add" class="link-dark rounded">New Item Procurement</a></li>
 
                         </ul>
                     </div>
-                </li>
-
+                </li>                
                 <li class=" mb-1">
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                         data-bs-target="#reports-collapse" aria-expanded="false">
@@ -88,40 +83,30 @@
                     </button>
                     <div class="collapse " id="reports-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../reports/?beneficiaries" class="link-dark rounded">Beneficiaries Report</a>
-                            </li>
-                            <li><a href="../reports/?lgainputs" class="link-dark rounded">LGA Inputs Report</a>
-                            </li>
-                            <li><a href="../reports/?lgagroup_assets" class="link-dark rounded">LGA Group Assets
-                                    Report</a>
-                            </li>
-                            <li><a href="../reports/?lgaindividual_assets" class="link-dark rounded">LGA Individual
-                                    Assets
-                                    Report</a></li>
+                            <li><a href="../reports/?beneficiaries" class="link-dark rounded">Beneficiaries Report</a></li>
+                            <li><a href="../reports/?lgainputs" class="link-dark rounded">LGA Inputs and Services Report</a></li>
+                            <li><a href="../reports/?lgagroup_assets" class="link-dark rounded">LGA Group Assets Report</a></li>
+                            <li><a href="../reports/?lgaindividual_assets" class="link-dark rounded">LGA Individual Assets Report</a></li>
+                        </ul>
+
                 </li>
+       
+                <li class="border-top my-3"></li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#account-collapse" aria-expanded="false">
+                        <i class="bi bi-person-square me-2"></i>
+                        <?php echo $_SESSION['userdata']; ?>
+                    </button>
+                    <div class="collapse" id="account-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a class="link-dark rounded" href=""><?php include_once '../../logout.inc.html.php'; ?></a>
+                            </li>
 
-
-
+                        </ul>
+                    </div>
+                </li>
             </ul>
-        </div>
-        </li>
-        <li class="border-top my-3"></li>
-        <li class="mb-1">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                data-bs-target="#account" aria-expanded="false">
-                <i class="bi bi-person-square me-2"></i>
-                <?php echo $_SESSION['userdata']; ?>
-            </button>
-            <div class="collapse" id="account">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-
-                    <li><a class="link-dark rounded" href=""><?php include_once '../../logout.inc.html.php'; ?></a>
-                    </li>
-
-                </ul>
-            </div>
-        </li>
-        </ul>
 
     </div>
     </div>

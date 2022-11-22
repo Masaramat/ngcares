@@ -35,6 +35,7 @@
             font-size: 3.5rem;
         }
     }
+    .dataTables_paginate {margin-top: 15px;}
     </style>
 
 
@@ -60,23 +61,10 @@
                     </div>
                     
                 </div>
-                <div class="row">
-                    <div
-                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        
+                <div class="row border-bottom d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-1">
+                    
                         <form action="" method="get">
                         <div class="row mb-2">
-                            <div class="form-group col-md-4">
-
-                                <select class="form-control form-select" name="lga" id="lga">
-                                    <option value="">All LGA</option>
-                                    <?php foreach ($lgas as $lga) : ?>
-                                    <option value="<?php htmlout($lga['id']); ?>"><?php htmlout($lga['name']); ?>
-                                    </option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-
                             <div class="form-group col-md-4">
 
                                 <select class="form-control form-select" name="enterprise" id="enterprise">
@@ -90,7 +78,7 @@
                             </div>
 
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-2">
                                 <input type="hidden" name="action" value="searchgroupassets" />
                                 <input class="form-control btn btn-success" type="submit" value="Search" />
                             </div>
@@ -99,7 +87,7 @@
                    
 
 
-                    </div>
+                   
                 </div>
 
 
@@ -138,6 +126,12 @@
 
                         </tr>
                         <?php endforeach; ?>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tfoot>
                 </table>
                 <?php endif; ?>
 
@@ -178,12 +172,11 @@
             scrollY: 380,
             scrollCollapse: true,
 
-            dom: 'lBrtip',
+            dom: 'riptlB',
             lengthMenu: [
                 [25, 50, 100, -1],
                 [25, 50, 100, 'All'],
-            ],
-            
+            ],            
 
             buttons: [
                 {
