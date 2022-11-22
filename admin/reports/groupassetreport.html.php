@@ -53,17 +53,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div
-                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-1 border-bottom">
                         <h1 class="h2">DLI 2.3: Group Assets Report</h1>
 
 
                     </div>
-                    <div class="row">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <form action="" method="get">
-                     <div class="row mb-2">
-
-
+                    
                 </div>
                 <div class="row">
                     <div
@@ -105,6 +100,7 @@
 
 
                     </div>
+                </div>
 
 
                 </div>
@@ -122,7 +118,7 @@
                             <th>Qty per Group</th>
                             <th>Qty Approved</th>
                             <th>Qty Procured</th>
-                            <th>Attrition</th>
+                            
                             <th>% Progress</th>
                         </tr>
                     </thead>
@@ -137,7 +133,7 @@
                             <td><?php htmlout($input['quantity']); ?></td>
                             <td><?php htmlout($input['qtyappr']); ?></td>
                             <td><?php htmlout($input['qtydstr']); ?></td>
-                            <td><?php htmlout($input['attrition']); ?></td>
+                            
                             <td><?php htmlout($input['percentage']); ?></td>
 
                         </tr>

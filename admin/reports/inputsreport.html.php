@@ -112,7 +112,7 @@
                             <th>Qty per Ben.</th>
                             <th>Qty Approved</th>
                             <th>Qty Procured</th>
-                            <th>Attrition</th>
+                            
                             <th>% Progress</th>
                         </tr>
                     </thead>
@@ -127,7 +127,6 @@
                             <td><?php htmlout($input['quantity']); ?></td>
                             <td><?php htmlout($input['qtyappr']); ?></td>
                             <td><?php htmlout($input['qtydstr']); ?></td>
-                            <td><?php htmlout($input['attrition']); ?></td>
                             <td><?php htmlout($input['percentage']); ?></td>
 
                         </tr>

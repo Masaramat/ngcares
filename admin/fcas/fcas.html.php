@@ -83,7 +83,7 @@
                                     <div>
                                         <input type="hidden" name="id" value="<?php htmlout($fca['id']); ?>" />
                                         <input type="submit" name="action" value="Edit" />
-                                        <input type="submit" name="action" value="Delete" />
+                                        
                                     </div>
                                 </form>
                             </td>

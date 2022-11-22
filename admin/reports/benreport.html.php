@@ -192,7 +192,7 @@
             scrollY: 380,
             scrollCollapse: true,
 
-            dom: 'lBrtip',
+            dom: 'riptlB',
             lengthMenu: [
                 [25, 50, 100, -1],
                 [25, 50, 100, 'All'],
