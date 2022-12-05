@@ -63,14 +63,14 @@
                     <thead>
                         <tr>
                             <th> S/N</th>
-                            <th>Beneficiary Name</th>
-                            <th>Means of ID</th>
-                            <th>ID Number</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                            <th>Group</th>
-                            <th>Enterprise</th>
+                            <th>Group Name</th>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Unit</th>
                             <th>FCA</th>
+                            <th>LGA</th>
+                            <th>Date</th>
+                            <th>Username</th>
 
                         </tr>
                     </thead>

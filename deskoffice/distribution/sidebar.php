@@ -46,7 +46,7 @@
                     <div class="collapse " id="groups-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="../groups" class="link-dark rounded">View</a></li>
-
+                           
 
                         </ul>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="collapse " id="beneficiaries-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="../beneficiaries/" class="link-dark rounded">View</a></li>
-
+                           
                         </ul>
                     </div>
                 </li>
@@ -72,8 +72,8 @@
                     </button>
                     <div class="collapse show" id="distributions-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a href="../distribution/" class="link-dark rounded">View</a></li>
-                            <li><a href="../distribution/?add" class="link-dark rounded">New Item Procurement</a></li>
+                            <li><a href="../distribution" class="link-dark rounded">View</a></li>
+                            <li><a href="../distribution?add" class="link-dark rounded">Add Procument</a></li>
 
                         </ul>
                     </div>

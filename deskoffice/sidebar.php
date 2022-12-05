@@ -60,7 +60,6 @@
                     <div class="collapse " id="beneficiaries-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="./beneficiaries/" class="link-dark rounded">View</a></li>
-                            <li><a href="./beneficiaries/?add" class="link-dark rounded">New Beneficiary</a></li>
 
                         </ul>
                     </div>
@@ -74,6 +73,7 @@
                     <div class="collapse " id="distributions-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li><a href="./distribution" class="link-dark rounded">View</a></li>
+                            <li><a href="./distribution?add" class="link-dark rounded">New Item Procument</a></li>
 
                         </ul>
                     </div>

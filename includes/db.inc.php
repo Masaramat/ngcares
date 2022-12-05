@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect('localhost', 'root', 'SudoP@ssw0rd');
+$link = mysqli_connect('localhost:3309', 'root', 'SudoP@ssw0rd@1234');
 if (!$link){
 	$error = 'Unable to connect to the database server.';
 	include 'error.html.php';

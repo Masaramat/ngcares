@@ -112,8 +112,8 @@ if (isset($_GET['addform'])) {
 
 	if (!mysqli_query($link, $sql)) {
 		$error = mysqli_error($link);
-		$error = 'Error saving distribution.';
-		include '../error.html.php';
+		$error = 'Error saving distribution.'.$link->error;
+		include '../../error.html.php';
 		exit();
 	}
 	$distributionid = mysqli_insert_id($link);
